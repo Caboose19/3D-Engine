@@ -1,5 +1,8 @@
 #pragma once
 
+#include "Engine/Core/File.h"
+#include <SDL_image.h>
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -12,3 +15,5 @@
 #include <time.h>
 #include <SDL.h>
 #include <glad\glad.h>
+#include "Engine/Core/Assert.h"
+#include "Engine/Math/Math.h"
