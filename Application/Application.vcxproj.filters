@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Engine\Math">
       <UniqueIdentifier>{7b72caf2-d679-4064-a984-133c43773377}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Reources\Texture">
+      <UniqueIdentifier>{4bd699fa-5627-4183-8853-6a9c71099d13}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -127,5 +130,16 @@
     <None Include="..\Build\Shaders\basic.vert">
       <Filter>Reources\Shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Build\Texture\llama.jpg">
+      <Filter>Reources\Texture</Filter>
+    </Image>
+    <Image Include="..\Build\Texture\rock.png">
+      <Filter>Reources\Texture</Filter>
+    </Image>
+    <Image Include="..\Build\Texture\wall.png">
+      <Filter>Reources\Texture</Filter>
+    </Image>
   </ItemGroup>
 </Project>
