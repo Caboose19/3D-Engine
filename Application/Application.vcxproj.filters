@@ -60,9 +60,6 @@
     <ClCompile Include="Engine\Graphics\Texture.cpp">
       <Filter>Source Files\Engine\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Input\InputSystems.cpp">
-      <Filter>Source Files\Engine\Input</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Resources\ResourceManager.cpp">
       <Filter>Source Files\Engine\Resources</Filter>
     </ClCompile>
@@ -73,6 +70,18 @@
       <Filter>Source Files\Engine\Core</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Graphics\Program.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Engine.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Input\InputSystem.cpp">
+      <Filter>Source Files\Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Graphics\VertexArray.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Graphics\VertexIndexArray.cpp">
       <Filter>Source Files\Engine\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,9 +107,6 @@
     <ClInclude Include="Engine\Graphics\Texture.h">
       <Filter>Source Files\Engine\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Input\InputSystems.h">
-      <Filter>Source Files\Engine\Input</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Resources\Resource.h">
       <Filter>Source Files\Engine\Resources</Filter>
     </ClInclude>
@@ -121,6 +127,18 @@
     </ClInclude>
     <ClInclude Include="Engine\Math\Math.h">
       <Filter>Source Files\Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Engine.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Input\InputSystem.h">
+      <Filter>Source Files\Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexArray.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Graphics\VertexIndexArray.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

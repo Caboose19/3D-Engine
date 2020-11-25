@@ -1,9 +1,9 @@
 #include "C:\Users\Zach\source\repos\3D Engine\Application\pch.h"
-#include "InputSystems.h"
+#include "InputSystem.h"
 
 namespace nc
 {
-	bool InputSystems::StartUp()
+	bool InputSystem::StartUp()
 	{
 		//get current keystate and retrieve num keys
 		const Uint8* keystate = SDL_GetKeyboardState(&m_numKeys);
@@ -17,12 +17,12 @@ namespace nc
 		memcpy(m_prevKeystate, keystate, m_numKeys);
 		return true;
 	}
-	void InputSystems::ShutDown()
+	void InputSystem::ShutDown()
 	{
 		delete[]m_keystate;
 		delete[]m_prevKeystate;
 	}
-	void InputSystems::Update()
+	void InputSystem::Update()
 	{
 		memcpy(m_prevKeystate, m_keystate, m_numKeys);
 
@@ -31,19 +31,19 @@ namespace nc
 		memcpy(m_keystate, keystate, m_numKeys);
 	}
 
-	bool InputSystems::GetButtonDown(int id)
+	bool InputSystem::GetButtonDown(int id)
 	{
 		return m_keystate[id];
 	}
 
-	bool InputSystems::GetPreviousButtonDown(int id)
+	bool InputSystem::GetPreviousButtonDown(int id)
 	{
 		return m_prevKeystate[id];
 	}
 
-	InputSystems::eButtonSate InputSystems::GetButtonState(int id)
+	InputSystem::eButtonSate InputSystem::GetButtonState(int id)
 	{
-		InputSystems::eButtonSate state = InputSystems::eButtonSate::IDLE;
+		InputSystem::eButtonSate state = InputSystem::eButtonSate::IDLE;
 
 		bool buttonDown = GetButtonDown(id);
 		
