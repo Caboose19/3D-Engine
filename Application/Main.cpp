@@ -56,11 +56,13 @@ int main(int argc, char** argv)
 	program.Use();
 
 	//create vertex buffer
-	nc::VertexIndexArray vertexArray;
-	vertexArray.Create("vertex");
-	vertexArray.CreateBuffer(sizeof(vertices), sizeof(vertices) / (sizeof(float) * 5), vertices);
-	vertexArray.SetAttribute(0, 5, 40, 0);
-	vertexArray.SetAttribute(1, 5, 40, (3 * sizeof(float)));
+	nc::VertexIndexArray vertexIndexArray;
+	vertexIndexArray.Create("vertex");
+	vertexIndexArray.CreateBuffer(sizeof(vertices), sizeof(vertices) / (sizeof(float) * 5), vertices);
+	vertexIndexArray.SetAttribute(0, 3, 5 * sizeof(float), 0);
+	vertexIndexArray.SetAttribute(1, 3, 5 * sizeof(float), (3 * sizeof(float)));
+	vertexIndexArray.CreateIndexBuffer(GL_UNSIGNED_SHORT, sizeof(indices) / sizeof(GLushort), indices);
+	
 
 
 
@@ -73,7 +75,7 @@ int main(int argc, char** argv)
 	glEnableVertexAttribArray(1);
 
 	//create index buffer
-	vertexArray.CreateIndexBuffer(GL_UNSIGNED_SHORT, sizeof(indices) / sizeof(GLushort), indices);
+	vertexIndexArray.CreateIndexBuffer(GL_UNSIGNED_SHORT, sizeof(indices) / sizeof(GLushort), indices);
 
 	//uniform
 	glm::mat4 model = glm::mat4(1.0f);
@@ -151,7 +153,7 @@ int main(int argc, char** argv)
 		GLsizei numElements = sizeof(indices) / sizeof(GLushort);
 		glDrawElements(GL_TRIANGLES, numElements, GL_UNSIGNED_SHORT, 0);
 
-		vertexArray.Draw();
+		vertexIndexArray.Draw();
 
 		engine.GetSystem < nc::Renderer>()->EndFrame();
 

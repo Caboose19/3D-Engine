@@ -17,9 +17,11 @@ void nc::VertexIndexArray::Destroy()
 void nc::VertexIndexArray::CreateIndexBuffer(GLenum indexType, GLsizei count, void* data)
 {
 	// set m_indexType to indexType
-	m_indexType = indexType;
 	// set m_indexCount to count
+	m_indexType = indexType;
 	m_indexCount = count;
+
+
 	// generate vertex buffer m_ibo with glGenBuffers
 	glGenBuffers(1, &m_ibo);
 	// bind the m_ibo vertex buffer with 
